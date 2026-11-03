@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>누수 사고 보상 사례</title>
+<meta name="description" content="금융감독원 분쟁사례를 바탕으로 만든 누수 사고 보상 안내 영상 5편">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@800&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+/* Layout: one narrow column of five portrait videos, each sized to fit the phone screen, read top to bottom like a short-video feed */
+*, *::before, *::after { box-sizing: border-box; }
+:root {
+  --bg: #F2F4F8; --surface: #FFFFFF; --ink: #14284B; --text: #1E2B45; --muted: #56627A;
+  --accent: #FFD43B; --line: #DCE2EC; --soft: #E7ECF5; --on-ink: #FFFFFF; --stage: #0D1525;
+  --display: "Gothic A1", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --body: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0D1525; --surface: #152038; --ink: #E9EEF7; --text: #D9E0EC; --muted: #9AA6BD;
+    --accent: #FFD43B; --line: #263450; --soft: #1C2944; --on-ink: #0D1525; --stage: #060B15; color-scheme: dark; }
+}
+body {
+  margin: 0; background: var(--bg); color: var(--text); font-family: var(--body);
+  font-size: 16px; line-height: 1.6; word-break: keep-all;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: max(20px, env(safe-area-inset-top, 0px)) max(40px, env(safe-area-inset-bottom, 0px));
+}
+main { max-width: 520px; margin: 0 auto; display: grid; gap: 28px; }
+.back { display: inline-flex; align-items: center; gap: 4px; font-size: 15px; font-weight: 700; color: var(--ink); text-decoration: none; padding: 6px 2px; }
+.back:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+.eyebrow { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: #14284B; background: var(--accent); padding: 3px 10px; border-radius: 999px; }
+h1 { font-family: var(--display); font-weight: 800; font-size: clamp(26px, 7.5vw, 34px); line-height: 1.25; color: var(--ink); margin: 12px 0 6px; text-wrap: balance; }
+.lead { margin: 0; color: var(--muted); }
+.case { display: grid; gap: 10px; scroll-margin-top: 16px; }
+.case-head { display: flex; align-items: center; gap: 8px; }
+.chip { font-size: 13px; font-weight: 700; color: var(--on-ink); background: var(--ink); border-radius: 999px; padding: 2px 10px; }
+.dur { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+h2 { font-size: 20px; font-weight: 700; color: var(--ink); margin: 0; line-height: 1.35; }
+video { display: block; width: 100%; max-width: calc(78vh * 9 / 16); margin: 0 auto; aspect-ratio: 9 / 16; border-radius: 16px; background: var(--stage); }
+.key { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; font-size: 15px; }
+.key b { color: var(--ink); margin-right: 6px; }
+.note { font-size: 13px; color: var(--muted); margin: 0; }
+</style>
+</head>
+<body>
+<main>
+  <nav><a class="back" href="index.html">‹ 처음으로</a></nav>
+  <header>
+    <span class="eyebrow">금융감독원 분쟁사례 5편</span>
+    <h1>누수 사고 보상 사례</h1>
+    <p class="lead">영상을 누르면 재생돼요. 소리를 켜고 보세요.</p>
+  </header>
+
+  <article class="case" id="case1">
+    <div class="case-head"><span class="chip">사례 1</span><span class="dur">1분 1초</span></div>
+    <h2>우리 집만 젖었다면?</h2>
+    <video src="videos/leak1.mp4" poster="posters/leak1.jpg" controls playsinline preload="none"></video>
+    <p class="key"><b>핵심</b>일상생활배상책임 특약은 남의 집 피해를 보상해요. 우리 집 피해는 급배수시설누출손해 특약으로 대비하고, 건물까지인지 가재도구만인지 보장 범위를 확인하세요.</p>
+  </article>
+
+  <article class="case" id="case2">
+    <div class="case-head"><span class="chip">사례 2</span><span class="dur">1분 9초</span></div>
+    <h2>우리 집 수리비, 어디까지?</h2>
+    <video src="videos/leak2.mp4" poster="posters/leak2.jpg" controls playsinline preload="none"></video>
+    <p class="key"><b>핵심</b>손해가 커지지 않게 막는 데 쓴 비용은 손해방지비용으로 보상될 수 있어요. 타일·마감 같은 복구 공사비는 제외될 수 있어요.</p>
+  </article>
+
+  <article class="case" id="case3">
+    <div class="case-head"><span class="chip">사례 3</span><span class="dur">57초</span></div>
+    <h2>세 준 집에서 누수가 났다면?</h2>
+    <video src="videos/leak3.mp4" poster="posters/leak3.jpg" controls playsinline preload="none"></video>
+    <p class="key"><b>핵심</b>2020년 4월 이후 가입했다면 직접 사는 집과 세 준 집의 누수도 보상돼요. 보상되는 집은 보험증권에 적힌 하나의 주택이에요.</p>
+  </article>
+
+  <article class="case" id="case4">
+    <div class="case-head"><span class="chip">사례 4</span><span class="dur">48초</span></div>
+    <h2>수리비, 전부 보상될까?</h2>
+    <video src="videos/leak4.mp4" poster="posters/leak4.jpg" controls playsinline preload="none"></video>
+    <p class="key"><b>핵심</b>보험금은 표준품셈·물가자료 같은 객관적 기준으로 산정해요. 누수와 관련 없는 공사나 근거 없는 견적은 보상받지 못할 수 있으니, 공사 전에 견적을 보험회사에 확인하세요.</p>
+  </article>
+
+  <article class="case" id="case5">
+    <div class="case-head"><span class="chip">사례 5</span><span class="dur">53초</span></div>
+    <h2>복도에서 샌 물, 누가 보상?</h2>
+    <video src="videos/leak5.mp4" poster="posters/leak5.jpg" controls playsinline preload="none"></video>
+    <p class="key"><b>핵심</b>누수 원인이 공용부분이면 개별 세대의 일상생활배상책임으로는 보상되지 않아요. 관리사무소·입주자대표회의가 가입한 단체보험 등을 확인하세요.</p>
+  </article>
+
+  <p class="note">금융감독원 보도자료(2024. 8. 7.) 「주요 분쟁사례로 알아보는 소비자 유의사항」을 바탕으로 만든 안내입니다. 실제 보상 여부는 가입한 상품과 약관에 따라 달라질 수 있어요.</p>
+  <nav><a class="back" href="index.html">‹ 처음으로</a></nav>
+</main>
+<script>
+// play one case at a time
+document.querySelectorAll('video').forEach(function (v) {
+  v.addEventListener('play', function () {
+    document.querySelectorAll('video').forEach(function (o) { if (o !== v && !o.paused) o.pause(); });
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>보상 안내 영상</title>
+<meta name="description" content="보험금 청구서 작성 안내와 누수 사고 보상 사례(금융감독원 분쟁사례 5편)를 휴대폰으로 보는 안내 페이지">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@800&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+/* Layout: one narrow column, a pocket guide: title, claim-form guide, leak-case list, source note */
+*, *::before, *::after { box-sizing: border-box; }
+:root {
+  --bg: #F2F4F8; --surface: #FFFFFF; --ink: #14284B; --text: #1E2B45; --muted: #56627A;
+  --accent: #FFD43B; --line: #DCE2EC; --soft: #E7ECF5; --on-ink: #FFFFFF;
+  --display: "Gothic A1", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --body: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0D1525; --surface: #152038; --ink: #E9EEF7; --text: #D9E0EC; --muted: #9AA6BD;
+    --accent: #FFD43B; --line: #263450; --soft: #1C2944; --on-ink: #0D1525; color-scheme: dark; }
+}
+body {
+  margin: 0; background: var(--bg); color: var(--text); font-family: var(--body);
+  font-size: 16px; line-height: 1.6; word-break: keep-all;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: max(28px, env(safe-area-inset-top, 0px)) max(40px, env(safe-area-inset-bottom, 0px));
+}
+img { max-width: 100%; display: block; }
+main { max-width: 520px; margin: 0 auto; display: grid; gap: 32px; }
+.eyebrow { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: #14284B; background: var(--accent); padding: 3px 10px; border-radius: 999px; }
+h1 { font-family: var(--display); font-weight: 800; font-size: clamp(28px, 8vw, 36px); line-height: 1.25; color: var(--ink); margin: 12px 0 8px; text-wrap: balance; }
+.lead { margin: 0; color: var(--muted); }
+section { display: grid; gap: 12px; }
+.sec-head { display: grid; grid-template-columns: 40px 1fr; gap: 12px; align-items: center; }
+.sec-icon { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: var(--ink); color: var(--on-ink); }
+.sec-icon svg { width: 22px; height: 22px; }
+h2 { font-size: 19px; font-weight: 700; color: var(--ink); margin: 0; line-height: 1.35; }
+.sub { margin: 0; font-size: 14px; color: var(--muted); }
+.choices { display: grid; gap: 10px; }
+a.card { color: var(--text); text-decoration: none; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; transition: transform .12s ease, border-color .12s ease; }
+a.card:hover { border-color: var(--ink); }
+a.card:active { transform: scale(0.985); }
+a.card:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.choice { display: grid; grid-template-columns: 72px 1fr auto; align-items: center; gap: 14px; padding: 12px 16px 12px 12px; }
+.time { display: grid; place-items: center; height: 60px; border-radius: 12px; background: var(--ink); color: var(--on-ink); font-weight: 700; font-variant-numeric: tabular-nums; }
+.time b { font-family: var(--display); font-size: 22px; font-weight: 800; }
+.time span { font-size: 12px; }
+.c-text { min-width: 0; display: grid; }
+.c-text strong { font-size: 17px; color: var(--ink); line-height: 1.4; }
+.c-text small { font-size: 14px; color: var(--muted); line-height: 1.45; }
+.arrow { font-size: 26px; color: var(--muted); line-height: 1; }
+.tip { margin: 0; font-size: 14px; color: var(--muted); padding: 10px 14px; background: var(--soft); border-radius: 12px; }
+.cases { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.case { display: grid; grid-template-columns: 54px 1fr auto; gap: 14px; align-items: center; padding: 10px 16px 10px 10px; }
+.case img { width: 54px; height: 96px; object-fit: cover; border-radius: 8px; background: var(--soft); }
+.c-meta { font-size: 13px; font-weight: 700; color: var(--muted); font-variant-numeric: tabular-nums; }
+.note { font-size: 13px; color: var(--muted); margin: 0; }
+@media (prefers-reduced-motion: reduce) { a.card { transition: none; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <span class="eyebrow">휴대폰으로 보는 보상 안내</span>
+    <h1>보상 안내 영상</h1>
+    <p class="lead">보험금 청구서 쓰는 방법과 누수 사고 보상 사례를 짧은 영상으로 확인하세요.</p>
+  </header>
+
+  <section aria-labelledby="claim">
+    <div class="sec-head">
+      <span class="sec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span>
+      <div><h2 id="claim">보험금 청구서 작성 안내</h2><p class="sub">배상책임 · 재물 · 여행자 보험용 · 번호를 누르면 그 단계로 이동</p></div>
+    </div>
+    <div class="choices">
+      <a class="card choice" href="short.html">
+        <span class="time"><span><b>58</b>초</span></span>
+        <span class="c-text"><strong>짧게 보기</strong><small>8단계를 빠르게 훑어봐요</small></span>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="card choice" href="detail.html">
+        <span class="time"><span><b>3</b>분</span></span>
+        <span class="c-text"><strong>자세히 보기</strong><small>천천히, 칸마다 TIP까지 알려 드려요</small></span>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
+    </div>
+    <p class="tip">화면을 누르면 멈추고, 다시 누르면 이어서 재생돼요. 소리는 화면을 한 번 누른 뒤부터 나와요.</p>
+  </section>
+
+  <section aria-labelledby="leak">
+    <div class="sec-head">
+      <span class="sec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></svg></span>
+      <div><h2 id="leak">누수 사고 보상 사례</h2><p class="sub">금융감독원 분쟁사례 5편 · 편마다 1분 안팎</p></div>
+    </div>
+    <ol class="cases">
+      <li><a class="card case" href="cases.html#case1"><img src="posters/leak1_s.jpg" alt="" width="54" height="96"><span class="c-text"><span class="c-meta">사례 1 · 1분 1초</span><strong>우리 집만 젖었다면?</strong><small>우리 집 피해는 급배수시설누출손해 특약으로</small></span><span class="arrow" aria-hidden="true">›</span></a></li>
+      <li><a class="card case" href="cases.html#case2"><img src="posters/leak2_s.jpg" alt="" width="54" height="96"><span class="c-text"><span class="c-meta">사례 2 · 1분 9초</span><strong>우리 집 수리비, 어디까지?</strong><small>손해를 막는 데 쓴 비용은 손해방지비용으로</small></span><span class="arrow" aria-hidden="true">›</span></a></li>
+      <li><a class="card case" href="cases.html#case3"><img src="posters/leak3_s.jpg" alt="" width="54" height="96"><span class="c-text"><span class="c-meta">사례 3 · 57초</span><strong>세 준 집에서 누수가 났다면?</strong><small>2020년 4월 이후 가입이면 세 준 집도 보상</small></span><span class="arrow" aria-hidden="true">›</span></a></li>
+      <li><a class="card case" href="cases.html#case4"><img src="posters/leak4_s.jpg" alt="" width="54" height="96"><span class="c-text"><span class="c-meta">사례 4 · 48초</span><strong>수리비, 전부 보상될까?</strong><small>객관적 기준으로 산정, 공사 전 견적 확인</small></span><span class="arrow" aria-hidden="true">›</span></a></li>
+      <li><a class="card case" href="cases.html#case5"><img src="posters/leak5_s.jpg" alt="" width="54" height="96"><span class="c-text"><span class="c-meta">사례 5 · 53초</span><strong>복도에서 샌 물, 누가 보상?</strong><small>공용부분 누수는 관리주체 · 단체보험으로</small></span><span class="arrow" aria-hidden="true">›</span></a></li>
+    </ol>
+  </section>
+
+  <p class="note">누수 사례는 금융감독원 보도자료(2024. 8. 7.) 「주요 분쟁사례로 알아보는 소비자 유의사항」을 바탕으로 만든 안내입니다. 실제 보상 여부는 가입한 상품과 약관에 따라 달라질 수 있어요. 화면 속 이름·연락처는 모두 예시입니다.</p>
+</main>
+</body>
+</html>
